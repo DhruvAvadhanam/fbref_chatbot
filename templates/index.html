@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FBRef Chatbot</title>
+</head>
+<body>
+  <h1>Ask a Premier League Question</h1>
+  <form action="/ask" method="post">
+    <input type="text" name="question" placeholder="e.g. Who has the most clean sheets?" required>
+    <button type="submit">Ask</button>
+  </form>
+
+  {% if response %}
+    <h3>Question: {{ question }}</h3>
+    <p><strong>Chatbot:</strong> {{ response }}</p>
+  {% endif %}
+</body>
+</html>
+
